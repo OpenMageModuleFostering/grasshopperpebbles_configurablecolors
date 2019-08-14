@@ -1,8 +1,7 @@
-var jqCol17 = jQuery.noConflict(true);
-(function ($) {
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	var v, tr, row;
 	$("#color_map").hide();
+	//console.log($("#configurablecolors_color_options_color_map").val());
 	v = $.parseJSON($("#configurablecolors_color_options_color_map").val());
 	//v = {"color_map":[{"Color Name":"24","Color Type":"color_hex","Color Value":"#CCCCCC"}]};
 	if (v) {
@@ -76,4 +75,3 @@ $(document).ready(function() {
 		$("#configurablecolors_color_options_color_map").val(JSON.stringify(obj));
 	}
 });
-}(jqCol17));
