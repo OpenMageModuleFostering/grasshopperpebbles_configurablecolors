@@ -48,8 +48,8 @@ class Grasshopperpebbles_Configurablecolors_ConfigurablecolorsController extends
 		    } 
 		    $data = json_encode($json_assoc);
 		    $data = '{"hasGender":'. '"'. $gender .'"' . ', "items": '. $data . '}';
-
-            echo $data;
+			$this->getResponse()->setBody($data);
+            //echo $data;
         }
 		
 		private function getSizeAttribute($assoc) {

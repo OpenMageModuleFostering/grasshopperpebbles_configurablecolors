@@ -1,5 +1,6 @@
-jQuery.noConflict();
-jQuery(document).ready(function($) {
+var jqCol17 = jQuery.noConflict(true);
+(function ($) {
+$(document).ready(function() {
 	var v, tr, row;
 	$("#color_map").hide();
 	v = $.parseJSON($("#configurablecolors_color_options_color_map").val());
@@ -75,3 +76,4 @@ jQuery(document).ready(function($) {
 		$("#configurablecolors_color_options_color_map").val(JSON.stringify(obj));
 	}
 });
+}(jqCol17));

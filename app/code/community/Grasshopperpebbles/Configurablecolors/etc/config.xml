@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Grasshopperpebbles_Configurablecolors>
-            <version>1.0.4</version>
+            <version>1.0.6</version>
         </Grasshopperpebbles_Configurablecolors>
     </modules>
     <adminhtml>
@@ -50,6 +50,17 @@
                 </configurablecolors>
             </updates>
         </layout>
+        <events>
+        	<controller_action_layout_generate_blocks_after>
+                <observers>
+                    <grasshopperpebbles_configurablecolors>
+                        <type>singleton</type>
+                        <class>Grasshopperpebbles_Configurablecolors_Model_BeforeObserver</class>
+                        <method>setMediaTemplate</method>
+                    </grasshopperpebbles_configurablecolors>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
     </frontend>   
     <global>
         <blocks>
