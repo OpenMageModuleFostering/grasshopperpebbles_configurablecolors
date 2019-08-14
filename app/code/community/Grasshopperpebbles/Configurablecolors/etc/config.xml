@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Grasshopperpebbles_Configurablecolors>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Grasshopperpebbles_Configurablecolors>
     </modules>
     <adminhtml>
@@ -53,6 +53,14 @@
     </frontend>   
     <global>
         <blocks>
+        	<catalog>
+                <rewrite>
+                    <product_view_media>Grasshopperpebbles_Configurablecolors_Catalog_Block_Product_View_Media</product_view_media>
+                </rewrite>
+            </catalog>
+            <!--<moo>
+                <class>Moo_Catalog_Block</class>
+        </moo> -->
             <configurablecolors>
                 <class>Grasshopperpebbles_Configurablecolors_Block</class>
             </configurablecolors>
@@ -60,8 +68,32 @@
         <models>
 		    <configurablecolors>
 		        <class>Grasshopperpebbles_Configurablecolors_Model</class>       
+		        <!--<resourceModel>configurablecolors_resource</resourceModel> -->
 		    </configurablecolors>
+		    <configurablecolors_adminhtml>
+	             <class>Grasshopperpebbles_Configurablecolors_Adminhtml_Model</class>
+	        </configurablecolors_adminhtml>
+		 <!-->   <configurablecolors_resource>
+		         <class>Grasshopperpebbles_Model_Resource</class>
+		         <entities>
+		               <settings>
+		                    <table>configurablecolors_settings</table>
+		               </settings>
+		               <color_map>
+		                    <table>configurablecolors_color_map</table>
+		               </color_map>
+		         </entities>
+		    </configurablecolors_resource> -->
 		</models>    
+
+       <!-- <resources>
+	        <configurablecolors_setup>
+	            <setup>
+	                <module>Grasshopperpebbles_Configurablecolors</module>
+	                <class>Grasshopperpebbles_Configurablecolors_Model_Resource_Setup</class>
+	            </setup>
+	        </configurablecolors_setup>
+	    </resources> -->
         <helpers>
             <configurablecolors>
                 <class>Grasshopperpebbles_Configurablecolors_Helper</class>
@@ -75,10 +107,15 @@
     			<thumb_height></thumb_height>
     			<image_width>365</image_width>
     			<image_height></image_height>
-    			<show_zoom>1</show_zoom>
-    			<zoom_width>1000</zoom_width>
-    			<zoom_height></zoom_height>
     		</images>
+    		<zoom_settings>
+    			<show_zoom>1</show_zoom>
+    			<zoom_position>inside</zoom_position>
+    			<zoom_width>300</zoom_width>
+    			<zoom_height>300</zoom_height>
+    			<zoom_image_width>1000</zoom_image_width>
+    			<zoom_image_height></zoom_image_height>
+    		</zoom_settings>
     		<color_options>
     			<color_map></color_map>
     		</color_options>

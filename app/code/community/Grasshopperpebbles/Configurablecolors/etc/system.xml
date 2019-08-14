@@ -78,19 +78,40 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </image_height>
-                        <show_zoom translate="label">
+                    </fields>
+                </images>
+                <zoom_settings translate="label">
+                    <label>Zoom Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+					 	<show_zoom translate="label">
                             <label>Show Image Zoom</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>5</sort_order>
+                            <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </show_zoom>
+                        <zoom_position translate="label">
+                            <label>Zoom Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>configurablecolors_adminhtml/system_config_source_zoomposition</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><show_zoom>1</show_zoom></depends>
+                        </zoom_position>
                         <zoom_width translate="label">
                             <label>Zoom Width</label>
+                            <comment>The width of the image container.</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>6</sort_order>
+                            <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -98,20 +119,40 @@
                         </zoom_width>
                         <zoom_height translate="label">
                             <label>Zoom Height</label>
-                            <comment>If a height is not entered, it will be calculated based upon the width.</comment>
+                            <comment>The height of the image container.</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>7</sort_order>
+                            <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends><show_zoom>1</show_zoom></depends>
                         </zoom_height>
-                    </fields>
-                </images>
+                        <zoom_image_width translate="label">
+                            <label>Image Zoom Width</label>
+                            <comment>The width of the image.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><show_zoom>1</show_zoom></depends>
+                        </zoom_image_width>
+                        <zoom_image_height translate="label">
+                            <label>Image Zoom Height</label>
+                            <comment>The height of the image. If a height is not entered, it will be calculated based upon the width.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><show_zoom>1</show_zoom></depends>
+                        </zoom_image_height>
+                	</fields>
+                </zoom_settings> 
                 <color_options translate="label">
                     <label>Color Options</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>2</sort_order>
+                    <sort_order>3</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>  

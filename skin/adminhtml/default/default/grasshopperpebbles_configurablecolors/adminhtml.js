@@ -1,29 +1,32 @@
+jQuery.noConflict();
 jQuery(document).ready(function($) {
 	var v, tr, row;
 	$("#color_map").hide();
 	v = $.parseJSON($("#configurablecolors_color_options_color_map").val());
 	//v = {"color_map":[{"Color Name":"24","Color Type":"color_hex","Color Value":"#CCCCCC"}]};
-	v = v.color_map;
-	if (v != '') {
-		$.each(v, function(i, itm) {
-			tr = $("<tr></tr>");
-			$("<td></td>").append(itm['color_name']).appendTo($(tr));
-			$("<td></td>").append(itm['color_type']).appendTo($(tr));
-			$("<td></td>").append(itm['color_value']).appendTo($(tr));
-			$("<td></td>").append(
-			$("<a></a>").attr("class", "configurable-color-row").html("Delete")).appendTo($(tr));
-			$(tr).appendTo($('#configurable-color-table tbody'));
-		});
-		/*rows = v.split("~");
-		$.each(rows, function(i, itm) {
-			tr = $("<tr></tr>");
-			row = $(itm).split(";");
-			$.each(row, function(j, td) {
-				$("<td></td>").append($(td)).appendTo($("tr"));
+	if (v) {
+		v = v.color_map;
+		if (v != '') {
+			$.each(v, function(i, itm) {
+				tr = $("<tr></tr>");
+				$("<td></td>").append(itm['color_name']).appendTo($(tr));
+				$("<td></td>").append(itm['color_type']).appendTo($(tr));
+				$("<td></td>").append(itm['color_value']).appendTo($(tr));
 				$("<td></td>").append(
-					$("<a></a>").attr({"id": "configurable-color-row-"+j, "class": "configurable-color-row"}).html("Delete")).appendTo($("tr"));
+				$("<a></a>").attr("class", "configurable-color-row").html("Delete")).appendTo($(tr));
+				$(tr).appendTo($('#configurable-color-table tbody'));
 			});
-		});*/
+			/*rows = v.split("~");
+			$.each(rows, function(i, itm) {
+				tr = $("<tr></tr>");
+				row = $(itm).split(";");
+				$.each(row, function(j, td) {
+					$("<td></td>").append($(td)).appendTo($("tr"));
+					$("<td></td>").append(
+						$("<a></a>").attr({"id": "configurable-color-row-"+j, "class": "configurable-color-row"}).html("Delete")).appendTo($("tr"));
+				});
+			});*/
+		}
 	}
 		
 	$(".configurable-color-row").click(function() {

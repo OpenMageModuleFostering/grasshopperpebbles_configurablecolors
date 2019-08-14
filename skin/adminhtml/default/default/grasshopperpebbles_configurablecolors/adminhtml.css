@@ -3,4 +3,4 @@
 #configurablecolors_color_options .form-list td.value select {width:180px;}
 #configurable-color-table {width:100%; margin-top:10px;}
 #configurable-color-table th {background-color:#6f8992; color:#fff;}
-/*#row_configurablecolors_color_options_color_map {display:none;}*/
+#row_configurablecolors_color_options_color_map {display:none;}
