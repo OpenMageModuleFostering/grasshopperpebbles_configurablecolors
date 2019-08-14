@@ -38,18 +38,18 @@ jQuery(document).ready(function($) {
 		v = $("#configurable-color-value").val();
 		if ($.trim(v) != "") {
 			$("<tr></tr>").append(
-				$j("<td></td>").html($j("#configurable-color-option").val()), 
-				$j("<td></td>").html($j("#configurable-color-type").val()),
-				$j("<td></td>").html(v), 
-				$j("<td></td>").html($j("<a></a>").attr("class", "configurable-color-row").html("Delete"))
-				).appendTo($j("#configurable-color-table"));
+				$("<td></td>").html($("#configurable-color-option").val()), 
+				$("<td></td>").html($("#configurable-color-type").val()),
+				$("<td></td>").html(v), 
+				$("<td></td>").html($("<a></a>").attr("class", "configurable-color-row").html("Delete"))
+				).appendTo($("#configurable-color-table"));
 			buildColorMap();
 		}
 		e.preventDefault();
 	});
 	
 	function buildColorMap() {
-		$j("#configurablecolors_color_options_color_map").val("");
+		$("#configurablecolors_color_options_color_map").val("");
 		
 		var ar = [];
 		var ln, cells, header;
