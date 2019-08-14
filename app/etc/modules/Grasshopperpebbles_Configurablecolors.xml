@@ -3,7 +3,7 @@
     <modules>
         <Grasshopperpebbles_Configurablecolors>
             <active>true</active>
-            <codePool>community</codePool>
+            <codePool>local</codePool>
         </Grasshopperpebbles_Configurablecolors>
     </modules>
 </config> 
