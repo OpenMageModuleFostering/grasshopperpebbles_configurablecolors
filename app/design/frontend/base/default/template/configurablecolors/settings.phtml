@@ -8,6 +8,9 @@ $swatch_selected_width = Mage::getStoreConfig('configurablecolors/swatch_setting
 $swatch_selected_height = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_height');
 $swatch_selected_border_size = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_border_size');
 $swatch_selected_border_color = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_border_color');
+$color_map = Mage::getStoreConfig('configurablecolors/color_options/color_map');
+$entity_type_id = Mage::helper('configurablecolors/data')->_getEntityTypeId();
+$color_attrib = Mage::helper('configurablecolors/data')->_getAttributeId('color', $entity_type_id);
 
 function getConfigurableImageSizes($size_type, $setting_type='images/') {
 	$size = Mage::getStoreConfig('configurablecolors/'. $setting_type . $size_type .'_width');
@@ -22,8 +25,11 @@ function getConfigurableImageSizes($size_type, $setting_type='images/') {
 <script type="text/javascript">
 jQuery.noConflict();
 jQuery(document).ready(function($) {
-	var c_map = <?php echo Mage::getStoreConfig('configurablecolors/color_options/color_map'); ?>;
-	c_map = c_map.color_map;
+	   var c_map = '';
+	   <?php if ($color_map) { ?>
+	       c_map = <?php echo $color_map; ?>
+	       c_map = c_map.color_map;
+	   <?php } ?>
     $(document.body).gpConfigurableColors({
     	product_id: '<?php echo Mage::registry('current_product')->getId(); ?>',
 		assoc_products_url: '<?php echo $this->getUrl('configurablecolors/configurablecolors/getassociatedproducts/'); ?>',
@@ -56,7 +62,8 @@ jQuery(document).ready(function($) {
 		zoom_height: '<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/zoom_height'); ?>',
 		zoom_position: '<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/zoom_position'); ?>',
 		use_zoom: Boolean(<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/show_zoom'); ?>),
-		//hide_color_dropdown: true,
+		hide_color_dropdown: true,
+		color_attrib_id: '<?php echo $color_attrib; ?>',
 		color_map: c_map
 	});
 });

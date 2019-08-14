@@ -10,6 +10,11 @@
 		<action method="addItem"><type>skin_js</type><name>js/gpconfigurablecolors/cloud-zoom.1.0.2.min.js</name></action>
 		<action method="addItem"><type>skin_js</type><name>js/gpconfigurablecolors/jquery.gpConfigurableColors.min.js</name></action>	
 	</reference>
+	<reference name="product.info.media">
+        <action method="setTemplate">
+            <template>configurablecolors/catalog/product/view/media.phtml</template>
+        </action>
+    </reference>
 	<reference name="product.info.options.wrapper"> <!-- product.info.extrahint -->
 			<block type="configurablecolors/settings" name="configurablecolors_settings" template="configurablecolors/settings.phtml" />
 	</reference>
