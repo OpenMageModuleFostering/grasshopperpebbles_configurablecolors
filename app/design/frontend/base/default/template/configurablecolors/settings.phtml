@@ -28,8 +28,8 @@ function getConfigurableImageSizes($size_type, $setting_type='images/') {
 if ($_product->getTypeId() == "configurable") {
 ?>
 <script type="text/javascript">
-var jqCol17 = jQuery.noConflict(true);
-(function ($) {
+jQuery.noConflict();
+
 $(document).ready(function() {
 	   var c_map = '';
 	   <?php if ($color_map) { ?>
@@ -73,7 +73,7 @@ $(document).ready(function() {
 		color_map: c_map
 	});
 });
-}(jqCol17));
+
 </script>
 
 <div id="gp-configurablecolors-swatch-container"></div>

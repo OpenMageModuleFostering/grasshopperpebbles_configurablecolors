@@ -6,7 +6,7 @@
  	<reference name="head">
 		<action method="addCss"><stylesheet>css/grasshopperpebbles_configurablecolors/grasshopperpebbles_configurablecolors.css</stylesheet></action>
 		<action method="addCss"><stylesheet>css/grasshopperpebbles_configurablecolors/cloud-zoom.css</stylesheet></action>
-		<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.min.js</name></action>
+		<!--<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.min.js</name></action> -->
 		<action method="addItem"><type>skin_js</type><name>js/gpconfigurablecolors/cloud-zoom.1.0.2.min.js</name></action>
 		<action method="addItem"><type>skin_js</type><name>js/gpconfigurablecolors/jquery.gpConfigurableColors.min.js</name></action>	
 	</reference>

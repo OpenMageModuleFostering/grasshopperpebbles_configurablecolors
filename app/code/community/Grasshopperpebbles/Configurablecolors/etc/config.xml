@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Grasshopperpebbles_Configurablecolors>
-            <version>1.0.6</version>
+            <version>1.0.8</version>
         </Grasshopperpebbles_Configurablecolors>
     </modules>
     <adminhtml>
