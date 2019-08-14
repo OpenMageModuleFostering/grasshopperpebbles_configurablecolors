@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <name>Grasshopperpebbles_Configurablecolors</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Create color swatches for configurable products. Includes image zoom.</summary>
+    <description>The Configurable Colors extensions allows users to create color swatches for products. Swatches can be made using HTML color names, Hex Values, Classes, or images.&#xD;
+&#xD;
+The Configurable Colors extension also controls the display of the thumb and large images. The sizes for these images can be set in the Admin interface. &#xD;
+&#xD;
+The Configurable Colors extension also comes with an image zoom component. The size of the zoom image is also configurable.  </description>
+    <notes>Stable&#xD;
+&#xD;
+Version number: 1.0.0&#xD;
+Stability: Stable&#xD;
+Compatibility: 1.5, 1.6, 1.6.1, 1.6.2.0, 1.7&#xD;
+</notes>
+    <authors><author><name>Les Green</name><user>lesgreen</user><email>lesgreen@grasshopperpebbles.com</email></author></authors>
+    <date>2013-12-28</date>
+    <time>13:55:08</time>
+    <contents><target name="magecommunity"><dir name="Grasshopperpebbles"><dir name="Configurablecolors"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Colormap.php" hash="324bb5b9f058af0a7b7ed4fcf7ff277d"/></dir></dir></dir></dir></dir><file name="Settings.php" hash="9634c1ae39ebc33c4e81f12d47e4ceab"/></dir><dir name="Helper"><file name="Data.php" hash="4bc7051a030e42fef72ec56c76398c1f"/></dir><dir name="Model"><file name="Colormap.php" hash="789f595cc3c997c4b993a2a9ef7035ed"/><dir name="Resource"><file name="Setup.php" hash="97144fe5d6c87e4495c61ad0ef6a0c2c"/></dir></dir><dir name="controllers"><file name="ConfigurablecolorsController.php" hash="3da6cc0eb203a20047a2eb13f5a22202"/></dir><dir name="etc"><file name="config.xml" hash="153e6881ba37ad0f8fe654310330febf"/><file name="system.xml" hash="9a7f6050e9cfe200d2e1954ff28a151e"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="grasshopperpebbles_configurablecolors.xml" hash="68fb5f93bf72b1fd345ba0fdbff3c1f3"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="grasshopperpebbles_configurablecolors.xml" hash="de9b1df2e20d0b828513c636244ca7aa"/></dir><dir name="template"><dir name="configurablecolors"><file name="settings.phtml" hash="cf8f9b7d537bd81b9b461093629821d1"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Grasshopperpebbles_Configurablecolors.xml" hash="f1129be87d78650f72d6634d9e1b7786"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="grasshopperpebbles_configurablecolors"><file name="adminhtml.css" hash="375269b7ce63cf926dcfdee3eab64a6c"/><file name="adminhtml.js" hash="468dd113b9ea76ec0977781aced55fde"/><file name="jquery-1.7.1.min.js" hash="a582795ee2a7189a8b9f616685944e5e"/></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="css"><dir name="grasshopperpebbles_configurablecolors"><file name="cloud-zoom.css" hash="c38ebaa2cece30139d7f120d719c079a"/><file name="grasshopperpebbles_configurablecolors.css" hash="a634c8b47b31c93f760ad69c3487a745"/></dir></dir><dir name="js"><dir name="gpconfigurablecolors"><file name="cloud-zoom.1.0.2.min.js" hash="e233d9a799550d0f58248d6eee669590"/><file name="jquery.gpConfigurableColors-min.js" hash="2af22426951218397aaef350bca033db"/></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="frontend"><dir name="default"><dir name="default"><dir name="js"><file name="jquery-1.7.1.min.js" hash=""/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>5.5.7</max></php></required></dependencies>
+</package>

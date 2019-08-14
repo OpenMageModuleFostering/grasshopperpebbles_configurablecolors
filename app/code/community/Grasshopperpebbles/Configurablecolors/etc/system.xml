@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Reports
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <sections>
+        <configurablecolors translate="label" module="configurablecolors">
+            <label>GrasshopperPebbles Configurable Colors</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+                <images translate="label">
+                    <label>Image Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+					 	<thumb_width translate="label">
+                            <label>Thumb Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumb_width>
+                        <thumb_height translate="label">
+                            <label>Thumb Height</label>
+                            <comment>If a height is not entered, it will be calculated based upon the width.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumb_height>
+                        <image_width translate="label">
+                            <label>Image Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_width>
+                        <image_height translate="label">
+                            <label>Image Height</label>
+                            <comment>If a height is not entered, it will be calculated based upon the width.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_height>
+                        <show_zoom translate="label">
+                            <label>Show Image Zoom</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_zoom>
+                        <zoom_width translate="label">
+                            <label>Zoom Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><show_zoom>1</show_zoom></depends>
+                        </zoom_width>
+                        <zoom_height translate="label">
+                            <label>Zoom Height</label>
+                            <comment>If a height is not entered, it will be calculated based upon the width.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><show_zoom>1</show_zoom></depends>
+                        </zoom_height>
+                    </fields>
+                </images>
+                <color_options translate="label">
+                    <label>Color Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+					 	<color_selection translate="label">
+                            <frontend_model>configurablecolors/adminhtml_system_config_form_field_colormap</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color_selection>
+						<color_map>
+							<label>Color Map</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</color_map>
+                    </fields>
+                    <comment><![CDATA[
+								<p>Many colors have an HTML Color Name 
+									(Black, White, Navy, etc. - see <a href="http://www.w3schools.com/html/html_colornames.asp" target="_blank">HTML Color Names</a>). </p>
+								<p>If you use a color that does not have an HTML color name, use the Color Map to create swatches. </p>
+								<p>For Instance, if you use the color "Ash", you can enter a hex color of #CCCCCC (or whatever hex code you choose).
+								<p>You can also use class that you have created in a CSS file.</p>
+								<p>If you choose to use an image swatch, please upload the image to <strong>media/grasshopperpebbles_configurablecolors/</strong></p> 
+								]]></comment>
+                </color_options>
+			</groups>
+        </configurablecolors>
+    </sections>
+</config>

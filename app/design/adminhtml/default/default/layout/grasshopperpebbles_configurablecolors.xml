@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_system_config_edit>
+        <reference name="head">
+          <action method="addCss"><stylesheet>grasshopperpebbles_configurablecolors/adminhtml.css</stylesheet></action>
+          <action method="addItem"><type>skin_js</type><name>grasshopperpebbles_configurablecolors/jquery-1.7.1.min.js</name></action>
+          <action method="addItem"><type>skin_js</type><name>grasshopperpebbles_configurablecolors/adminhtml.js</name></action>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>

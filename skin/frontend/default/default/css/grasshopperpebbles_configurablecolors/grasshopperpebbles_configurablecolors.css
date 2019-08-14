@@ -1,0 +1,37 @@
+#gp-configurablecolors-swatch-container {
+	position:relative;
+	height:34px;
+	margin-top:5px;
+}
+
+a.gp-configurablecolors-swatch {
+	float:left;
+	display:block;
+	width:30px;
+	height:30px;
+	margin-right:3px;
+	cursor: pointer;
+	border: solid thin #000000;
+}
+a.gp-configurablecolors-swatch-selected {
+	border: solid 4px red;
+	width:24px;
+	height:24px;
+}
+a.gp-configurablecolors-swatch-multicolor-black {
+	background: url('../images/gp_configurablecolors/color_options_black.png') no-repeat;
+}
+
+a.gp-configurablecolors-swatch-multicolor-white {
+	background: url('../images/gp_configurablecolors/color_options_white.png') no-repeat;
+}
+
+a.gp-configurablecolors-swatch-multicolor-navy {
+	background: url('../images/gp_configurablecolors/color_options_navy.png') no-repeat;	
+}
+
+.product-view .product-img-box { float:left; width:365px; }
+.product-view .product-img-box .product-image-zoom { position:relative; width:365px; height:400px; overflow:hidden; z-index:9; }
+.cloudzoom-gallery {
+	cursor:pointer;
+}

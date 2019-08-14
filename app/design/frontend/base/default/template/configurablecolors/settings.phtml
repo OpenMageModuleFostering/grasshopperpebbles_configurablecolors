@@ -1,0 +1,38 @@
+<?php
+$thumb_size = getConfigurableImageSizes('thumb');
+$large_size = getConfigurableImageSizes('image');
+$zoom_size = getConfigurableImageSizes('zoom');
+
+function getConfigurableImageSizes($size_type) {
+	$size = Mage::getStoreConfig('configurablecolors/images/'. $size_type .'_width');
+	$h = Mage::getStoreConfig('configurablecolors/images/'. $size_type .'_height');
+	if ($h != '') {
+		$size = $size . ',' . $h;
+	}
+	return $size;
+}
+
+?>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	var c_map = <?php echo Mage::getStoreConfig('configurablecolors/color_options/color_map'); ?>;
+	c_map = c_map.color_map;
+    $(document.body).gpConfigurableColors({
+    	product_id: '<?php echo Mage::registry('current_product')->getId(); ?>',
+		assoc_products_url: '<?php echo $this->getUrl('configurablecolors/configurablecolors/getassociatedproducts/'); ?>',
+		swatch_container: 'gp-configurablecolors-swatch-container',
+		swatch_class: 'gp-configurablecolors-swatch',
+		swatch_class_selected: 'gp-configurablecolors-swatch-selected',
+		swatch_image_url: '<?php echo  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA). "grasshopperpebbles_configurablecolors/"; ?>',
+		thumb_size: '<?php echo $thumb_size; ?>',
+		large_size: '<?php echo $large_size; ?>',
+		zoom_size: '<?php echo $zoom_size; ?>',
+		use_zoom: Boolean(<?php echo Mage::getStoreConfig('configurablecolors/images/show_zoom'); ?>),
+		//hide_color_dropdown: true,
+		color_map: c_map
+	});
+});
+
+</script>
+
+<div id="gp-configurablecolors-swatch-container"></div>

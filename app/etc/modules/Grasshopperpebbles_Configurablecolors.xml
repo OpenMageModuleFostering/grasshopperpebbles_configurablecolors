@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Grasshopperpebbles_Configurablecolors>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Grasshopperpebbles_Configurablecolors>
+    </modules>
+</config> 
