@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Grasshopperpebbles_Configurablecolors>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </Grasshopperpebbles_Configurablecolors>
     </modules>
     <adminhtml>
@@ -58,9 +58,6 @@
                     <product_view_media>Grasshopperpebbles_Configurablecolors_Catalog_Block_Product_View_Media</product_view_media>
                 </rewrite>
             </catalog>
-            <!--<moo>
-                <class>Moo_Catalog_Block</class>
-        </moo> -->
             <configurablecolors>
                 <class>Grasshopperpebbles_Configurablecolors_Block</class>
             </configurablecolors>
@@ -108,6 +105,14 @@
     			<image_width>365</image_width>
     			<image_height></image_height>
     		</images>
+    		<swatch_settings>
+    			<swatch_width></swatch_width>
+    			<swatch_height></swatch_height>
+    			<swatch_selected_width></swatch_selected_width>
+    			<swatch_selected_height></swatch_selected_height>
+    			<swatch_selected_border_size></swatch_selected_border_size>
+    			<swatch_selected_border_color></swatch_selected_border_color>
+    		</swatch_settings>
     		<zoom_settings>
     			<show_zoom>1</show_zoom>
     			<zoom_position>inside</zoom_position>

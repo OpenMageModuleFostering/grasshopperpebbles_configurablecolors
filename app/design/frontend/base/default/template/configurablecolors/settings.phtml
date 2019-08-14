@@ -1,11 +1,17 @@
 <?php
 $thumb_size = getConfigurableImageSizes('thumb');
 $large_size = getConfigurableImageSizes('image');
-$zoom_size = getConfigurableImageSizes('zoom_image');
+$zoom_size = getConfigurableImageSizes('zoom_image', 'zoom_settings/');
+$swatch_width = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_width');
+$swatch_height = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_height');
+$swatch_selected_width = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_width');
+$swatch_selected_height = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_height');
+$swatch_selected_border_size = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_border_size');
+$swatch_selected_border_color = Mage::getStoreConfig('configurablecolors/swatch_settings/swatch_selected_border_color');
 
-function getConfigurableImageSizes($size_type) {
-	$size = Mage::getStoreConfig('configurablecolors/images/'. $size_type .'_width');
-	$h = Mage::getStoreConfig('configurablecolors/images/'. $size_type .'_height');
+function getConfigurableImageSizes($size_type, $setting_type='images/') {
+	$size = Mage::getStoreConfig('configurablecolors/'. $setting_type . $size_type .'_width');
+	$h = Mage::getStoreConfig('configurablecolors/images/'.$setting_type . $size_type .'_height');
 	if ($h != '') {
 		$size = $size . ',' . $h;
 	}
@@ -25,13 +31,31 @@ jQuery(document).ready(function($) {
 		swatch_class: 'gp-configurablecolors-swatch',
 		swatch_class_selected: 'gp-configurablecolors-swatch-selected',
 		swatch_image_url: '<?php echo  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA). "grasshopperpebbles_configurablecolors/"; ?>',
+		<?php if ($swatch_width) { ?>
+		swatch_width: '<?php echo $swatch_width; ?>',
+		<?php } ?>
+		<?php if ($swatch_height) { ?>
+		swatch_height: '<?php echo $swatch_height; ?>',
+		<?php } ?>
+		<?php if ($swatch_selected_width) { ?>
+		swatch_selected_width: '<?php echo $swatch_selected_width; ?>',
+		<?php } ?>
+		<?php if ($swatch_selected_height) { ?>
+		swatch_selected_height: '<?php echo $swatch_selected_height; ?>',
+		<?php } ?>
+		<?php if ($swatch_selected_border_size) { ?>
+		swatch_selected_border_size: '<?php echo $swatch_selected_border_size; ?>',
+		<?php } ?>
+		<?php if ($swatch_selected_border_color) { ?>
+		swatch_selected_border_color: '<?php echo $swatch_selected_border_color; ?>',
+		<?php } ?>
 		thumb_size: '<?php echo $thumb_size; ?>',
 		large_size: '<?php echo $large_size; ?>',
 		zoom_image_size: '<?php echo $zoom_size; ?>',
 		zoom_width: '<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/zoom_width'); ?>',
 		zoom_height: '<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/zoom_height'); ?>',
 		zoom_position: '<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/zoom_position'); ?>',
-		use_zoom: Boolean(<?php echo Mage::getStoreConfig('configurablecolors/images/show_zoom'); ?>),
+		use_zoom: Boolean(<?php echo Mage::getStoreConfig('configurablecolors/zoom_settings/show_zoom'); ?>),
 		//hide_color_dropdown: true,
 		color_map: c_map
 	});

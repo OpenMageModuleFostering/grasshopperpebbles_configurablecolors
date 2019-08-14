@@ -80,10 +80,75 @@
                         </image_height>
                     </fields>
                 </images>
+                <swatch_settings translate="label">
+                    <label>Swatch Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+                        <swatch_width translate="label">
+                            <label>Swatch Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_width>
+                        <swatch_height translate="label">
+                            <label>Swatch Height</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_height>
+                        <swatch_selected_width translate="label">
+                            <label>Selected Swatch Width</label>
+                            <comment>A border is displayed around the selected swatch. The width of the swatch is dependent upon the size of the border.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_selected_width>
+                        <swatch_selected_height translate="label">
+                            <label>Selected Swatch Height</label>
+                            <comment>A border is displayed around the selected swatch. The height of the swatch is dependent upon the size of the border.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_selected_height>
+                        <swatch_selected_border_size translate="label">
+                            <label>Selected Swatch Border Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_selected_border_size>
+                        <swatch_selected_border_color translate="label">
+                            <label>Selected Swatch Border Color</label>
+                            <comment><![CDATA[
+								<p>Enter either a HTML Color Name 
+									(Black, White, Navy, etc. - see <a href="http://www.w3schools.com/html/html_colornames.asp" target="_blank">HTML Color Names</a>) or a Hex value (#cccccc, etc). </p>
+								]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatch_selected_border_color>
+                	</fields>
+                	<comment>The Swatch Settings section is optional. The values are set using CSS and should be modified in the corresponding style sheet.</comment>
+                </swatch_settings>
                 <zoom_settings translate="label">
                     <label>Zoom Settings</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>2</sort_order>
+                    <sort_order>3</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>  
