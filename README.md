@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Create color swatches for configurable products. Includes image zoom.

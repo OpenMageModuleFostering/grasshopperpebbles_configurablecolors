@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Grasshopperpebbles_Configurablecolors",
+    "name": "openmage-module-fostering\/grasshopperpebbles_configurablecolors",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Create color swatches for configurable products. Includes image zoom.",
     "authors": [
